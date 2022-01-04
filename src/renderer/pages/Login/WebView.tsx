@@ -14,7 +14,7 @@ const WebView = ({ onLoadedSession }) => {
         // e.preventDefault();
         const { session } = webview.getWebContents();
         onLoadedSession(session, COOKIE_URL, isOauth);
-        webview.reload();
+        // webview.reload();
       }
     };
     const handleLoadCommit = () => {
@@ -39,7 +39,7 @@ const WebView = ({ onLoadedSession }) => {
       // win.webContents.openDevTools();
       win.on('closed', (event) => {
         event.preventDefault();
-        webview.reload();
+        // webview.reload();
         handleDOMReady(null, true);
       });
     });
